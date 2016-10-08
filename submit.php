@@ -1,16 +1,17 @@
 
-<?php
+  <?php
 
-//if(isset($_POST("gonder")));
-// mysql_connect("localhost","root","");
-//  $poet=$_POST["poet"];
-//    $name=$_POST["name"];
-  //    $poem=$_POST["poem"]
-//
+  //if(isset($_POST("gonder")));
+  // mysql_connect("localhost","root","");
+  //  $poet=$_POST["poet"];
+  //    $name=$_POST["name"];
+    //    $poem=$_POST["poem"]
+  //
 
 
-//mysql_query("INSERT INTO poem(id,poet,poem,pdate,sdate,name) VALUES ('','$poet','$poem','','','$name') ")
-?>
+
+  //mysql_query("INSERT INTO poem(id,poet,poem,pdate,sdate,name) VALUES ('','$poet','$poem','','','$name') ")
+  ?>
 
 
 
@@ -22,7 +23,7 @@
 <body>
 
 
-  <form action="" method="post">
+  <form action="success.php" method="get">
     Poet name:<br>
     <input type="text" name="poet"><br>
     poem name:<br>
