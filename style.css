@@ -1,0 +1,67 @@
+ #content{
+text-align: center;
+
+width: 25%;
+
+margin-left: auto;
+margin-right: auto;
+padding:  1%;
+
+ }
+ #siir{
+
+font-size: 130%;
+color: #333333;
+font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+
+ }
+ #baslik{
+
+font-size: 200%;
+
+color: #333333;
+font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+
+ }
+ #lines{
+   background-color: black;
+   height: 0.2%;
+   margin-left: auto;
+   margin-right: auto;
+
+ }
+ .footer {
+   height: 5%;
+
+  text-align: center;
+font-size: 110%
+}
+ #line{
+
+background-color: black;
+height: 0.2%;
+margin-left: auto;
+margin-right: auto;
+width: 90%;
+margin-top: 2%;
+
+ }
+ #navbar{
+
+margin-left: auto;
+margin-right: auto;
+width: 50%;
+text-align: center;
+padding-left: 0;
+padding-right: 0;
+word-spacing: 169%;
+
+ }
+#yazar{
+  text-align: right;
+}
+a {
+  font-size: 150%;
+  font-family: Courier, Monaco, monospace;
+
+}

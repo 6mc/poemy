@@ -24,7 +24,6 @@
 
 
   <form action="success.php" method="get">
-    Poet name:<br>
     <input type="text" name="poet"><br>
     poem name:<br>
     <input type="text" name="name"><br>
