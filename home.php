@@ -3,7 +3,7 @@
 mysql_connect("localhost","root","");
 mysql_select_db("poemy");
 
-$sec=mysql_query("select * from poem LIMIT 0,5");
+$sec=mysql_query("select * from poem ");
 
 //$dizi=mysql_fetch_array($sec);
 
@@ -85,7 +85,7 @@ echo "</div>";
 
  ?>
 
- <a style="text-decoration:none;color:black; font-size:90%" href="home.php">SEE MORE</a>
+
 
 </div>
 <img src="extasy.regular.png"  style="margin-top:2%">

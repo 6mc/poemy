@@ -46,6 +46,31 @@ width: 90%;
 margin-top: 2%;
 
  }
+ .glowing-border {
+    border: 1px solid #333333;
+    border-radius: 7px;padding-left: 3px;
+}
+
+.glowing-border:focus {
+    outline: none;
+
+}
+#button{
+
+  
+}
+
+#form{
+
+
+margin-top: 2%;
+  color: #333333;
+  font-family: Impact, Charcoal, sans-serif;
+font-size: 120%;
+
+
+}
+
  #navbar{
 
 margin-left: auto;
