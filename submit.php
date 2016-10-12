@@ -37,9 +37,9 @@
 
   <div id="navbar" class="row" style="color:black; margin-top:5%; " >
     <div class="col-md-3">
-  <a style="text-decoration:none;color:black;  color: 928D88#; col-md" href="HOME">HOME</a>
+  <a style="text-decoration:none;color:black;  color: 928D88#; col-md" href="index.php">HOME</a>
   </div><div class="col-md-3">
-  <a  style="text-decoration:none;color:black;color: 928D88#;" href="ADD">ADD</a>
+  <a  style="text-decoration:none;color:black;color: 928D88#;" href="submit.php">ADD</a>
   </div><div class="col-md-3">
 
   <a style="text-decoration:none;color:black;color: 928D88#;" href="FIND">FIND</a>
@@ -56,22 +56,45 @@
 <div id="form">
 
 
-  <form action="success.php" method="get">
-    Poet<br>
-    <input type="text" class="glowing-border" name="poet"><br>
-    Poem Name<br>
-    <input type="text"class="glowing-border" name="name"><br>
-    Poem<br>
-    <textarea type="text"class="glowing-border" rows="4" name="poem" cols="50">
-</textarea><br>
+  <form action="check.php" method="get">
+    <br>
+    <input type="text" class="glowing-border" Placeholder="Poet" name="poet"><br>
+    <div id="smline">
+
+    </div>
+    <br>
+    <div class="col-md-12">
+
+
+    <input type="text"class="glowing-border" Placeholder="Poem Name" name="name"><br>
+    <div id="smline">
+
+    </div>
+    </div>
+    <br>
+<div class="pom">
+
+
+
+
+
+
+    <textarea type="text" class="glowing-border" id=poem Placeholder="Poem" rows="8" name="poem" cols="50">
+</textarea>
+<div id="mline">
+
+</div>
+</div>
+<br>
+<input type="submit" style="border: none;background-color:white;" value="ADD" name="gonder">
 
   </form>
 </div>
-<div class="myButton">
+<div id="button" >
 
 
-    <input type="submit" value="gonder" name="gonder">
-</div>
+    </div>
+
 
 
 </body>

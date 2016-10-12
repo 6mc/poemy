@@ -1,12 +1,8 @@
-
 <?php
 mysql_connect("localhost","root","");
 mysql_select_db("poemy");
-
 $sec=mysql_query("select * from poem LIMIT 0,5");
-
 //$dizi=mysql_fetch_array($sec);
-
  ?>
 <html>
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
@@ -29,9 +25,9 @@ $sec=mysql_query("select * from poem LIMIT 0,5");
 
 <div id="navbar" class="row" style="color:black; margin-top:5%; " >
     <div class="col-md-3">
-<a style="text-decoration:none;color:black;  color: 928D88#; col-md" href="HOME">HOME</a>
+<a style="text-decoration:none;color:black;  color: 928D88#; col-md" href="index.php">HOME</a>
 </div><div class="col-md-3">
-<a  style="text-decoration:none;color:black;color: 928D88#;" href="ADD">ADD</a>
+<a  style="text-decoration:none;color:black;color: 928D88#;" href="submit.php">ADD</a>
 </div><div class="col-md-3">
 
 <a style="text-decoration:none;color:black;color: 928D88#;" href="FIND">FIND</a>
@@ -51,15 +47,9 @@ $sec=mysql_query("select * from poem LIMIT 0,5");
 
 
 <?php
-
 while ($dizi=mysql_fetch_array($sec)) {
-
   # code...
-
   # code...
-
-
-
 echo "<br/>";
 echo "<div id='baslik'>";
 echo $dizi["name"];
@@ -77,12 +67,7 @@ echo "<br/>";
 echo "<br/>";
 echo "<div id='lines'>";
 echo "</div>";
-
-
-
-
 }
-
  ?>
 
  <a style="text-decoration:none;color:black; font-size:90%" href="home.php">SEE MORE</a>

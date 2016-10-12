@@ -1,13 +1,4 @@
 
-<?php
-mysql_connect("localhost","root","");
-mysql_select_db("poemy");
-
-$sec=mysql_query("select * from poem ");
-
-//$dizi=mysql_fetch_array($sec);
-
- ?>
 <html>
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
 <link href="normalize.css" rel="stylesheet">
@@ -52,46 +43,34 @@ $sec=mysql_query("select * from poem ");
 
 <?php
 
-while ($dizi=mysql_fetch_array($sec)) {
 
-  # code...
+$poet=$_GET["poet"];
+$name=$_GET["name"];
+$poem=$_GET["poem"];
 
-  # code...
-
-
-
-echo "<br/>";
-echo "<div id='baslik'>";
-echo $dizi["name"];
-echo "</div>";
-echo "<br/>";
-echo "<div id='siir'>";
-echo $dizi["poem"];
-echo "</div>";
-echo "<br/>";
-echo "<div id='yazar's>";
-echo $dizi["poet"];
-echo "</div>";
-echo "<br/>";
-echo "<br/>";
-echo "<br/>";
-echo "<div id='lines'>";
-echo "</div>";
-
-
+if (empty($poet) || empty($name) || empty($poem) ) {
+    //Empty
+echo "please fill all the fields !";
 
 
 }
+else {
+    //Not Empty
+    echo "success!";
+    mysql_connect("localhost","root","");
+    mysql_select_db("poemy");
+    mysql_query("INSERT INTO poem(id,poet,poem,pdate,sdate,name) VALUES ('','$poet','$poem','','','$name') ");
+
+}
+
 
  ?>
 
 
 
 </div>
-<img src="extasy.regular.png"  style="margin-top:2%">
-<div class="footer">
-Designed by <b href="mefa">Mehmet Can</b>
-</div>
+
+
 
   </body>
 </html>
