@@ -56,37 +56,18 @@
 <div id="form">
 
 
-  <form action="check.php" method="get">
+  <form action="result.php" method="get">
     <br>
-    <input type="text" class="glowing-border" Placeholder="Poet" name="poet"><br>
+    <input type="text" class="glowing-border" Placeholder="Poem Name,Poet or a Tag" name="keyword"><br>
     <div id="smline">
 
     </div>
     <br>
-    <div class="col-md-12">
 
-
-    <input type="text"class="glowing-border" Placeholder="Poem Name" name="name"><br>
-    <div id="smline">
-
-    </div>
-    </div>
     <br>
-<div class="pom">
 
-
-
-
-
-
-    <textarea type="text" class="glowing-border" id=poem Placeholder="Poem" rows="8" name="poem" cols="50">
-</textarea>
-<div id="mline">
-
-</div>
-</div>
 <br>
-<input type="submit" style="border: none;background-color:white;" value="ADD" name="gonder">
+<input type="submit" style="border: none;background-color:white; font-size:120%; font-family: Impact, Charcoal, sans-serif;  color: #333333;  font-weight: bold;" value="FIND" name="giver">
 
   </form>
 </div>

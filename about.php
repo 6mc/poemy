@@ -1,4 +1,9 @@
-
+<?php
+mysql_connect("localhost","root","");
+mysql_select_db("poemy");
+$sec=mysql_query("select * from poem LIMIT 0,5");
+//$dizi=mysql_fetch_array($sec);
+ ?>
 <html>
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
 <link href="normalize.css" rel="stylesheet">
@@ -25,7 +30,7 @@
 <a  style="text-decoration:none;color:black;color: 928D88#;" href="submit.php">ADD</a>
 </div><div class="col-md-3">
 
-<a style="text-decoration:none;color:black;color: 928D88#;" href="FIND">FIND</a>
+<a style="text-decoration:none;color:black;color: 928D88#;" href="find.php">FIND</a>
 </div>
 <div class="col-md-3">
 <a style="text-decoration:none;color:black;" href="about.php">ABOUT</a>
@@ -36,41 +41,32 @@
 <div id="line">
 
 </div>
+<div id="tita">
+ABOUT US <br>
+</div>
 
+<img src="rsz_dscn2236.jpg"  style="width:25%; height:auto; margin-top:1%">
 
-<div id="content">
+<div id="context">
 
-
-<?php
-
-
-$poet=$_GET["poet"];
-$name=$_GET["name"];
-$poem=$_GET["poem"];
-
-if (empty($poet) || empty($name) || empty($poem) ) {
-    //Empty
-echo "please fill all the fields !";
-
-
-}
-else {
-    //Not Empty
-    echo "success!";
-    mysql_connect("localhost","root","");
-    mysql_select_db("poemy");
-    mysql_query("INSERT INTO poem(id,poet,poem,pdate,sdate,name) VALUES ('','$poet','$poem','','','$name') ");
-
-}
-
-
- ?>
-
+Under new direction as of the Spring of 2016, and with a client roster made up
+of some of the most sought after poets making art today, POEMY’s focus
+ is on discovering new talent and transforming them into pure Artists
+ The website’s signature is a collective approach, leveraging the know-how and
+ industry relationships of the team of developers rather than one representative,
+  with a commitment to each person’s long-term objectives
 
 
 </div>
+<div id="line">
 
+</div>
+<img src="extasy.regular.png"  style="margin-top:2%">
 
+<div class="footer">
+
+Designed by <b href="mefa">Mehmet Can</b>
+</div>
 
   </body>
 </html>

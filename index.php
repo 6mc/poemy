@@ -30,10 +30,10 @@ $sec=mysql_query("select * from poem LIMIT 0,5");
 <a  style="text-decoration:none;color:black;color: 928D88#;" href="submit.php">ADD</a>
 </div><div class="col-md-3">
 
-<a style="text-decoration:none;color:black;color: 928D88#;" href="FIND">FIND</a>
+<a style="text-decoration:none;color:black;color: 928D88#;" href="find.php">FIND</a>
 </div>
 <div class="col-md-3">
-<a style="text-decoration:none;color:black;" href="ABOUT">ABOUT</a>
+<a style="text-decoration:none;color:black;" href="about.php">ABOUT</a>
 
 </div>
 </div>

@@ -8,6 +8,17 @@ margin-right: auto;
 padding:  1%;
 
  }
+ #context{
+text-align: center;
+color: #333333;
+font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+width: 50%;
+font-size: 127%;
+margin-left: auto;
+margin-right: auto;
+padding:  1%;
+
+ }
 #vtline{
 
 background-color: white;
@@ -39,6 +50,10 @@ font-size: 200%;
 color: #333333;
 font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
 
+ }
+ #tita{
+margin-top:1%;
+font-size: 234%;
  }
  #lines{
    background-color: black;
