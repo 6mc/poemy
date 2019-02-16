@@ -1,9 +1,4 @@
-<?php
-mysql_connect("localhost","root","");
-mysql_select_db("poemy");
-$sec=mysql_query("select * from poem LIMIT 0,5");
-//$dizi=mysql_fetch_array($sec);
- ?>
+
 <html>
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
 <link href="normalize.css" rel="stylesheet">
@@ -18,10 +13,10 @@ $sec=mysql_query("select * from poem LIMIT 0,5");
 
   <head>
     <meta charset="utf-8">
-    <title>Poemy</title>
+    <title>monoBlog</title>
   </head>
   <body style="text-align:center">
-<img src="lusitana.regular.png"  style="margin-top:2%">
+<img src="mono.png"  style="margin-top:2%">
 
 <div id="navbar" class="row" style="color:black; margin-top:5%; " >
     <div class="col-md-3">

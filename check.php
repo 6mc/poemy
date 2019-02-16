@@ -16,7 +16,7 @@
     <title>Poemy</title>
   </head>
   <body style="text-align:center">
-<img src="lusitana.regular.png"  style="margin-top:2%">
+<img src="mono.png"  style="margin-top:2%">
 
 <div id="navbar" class="row" style="color:black; margin-top:5%; " >
     <div class="col-md-3">
@@ -44,22 +44,37 @@
 <?php
 
 
-$poet=$_GET["poet"];
+$pdate=$_GET["pdate"];
 $name=$_GET["name"];
 $poem=$_GET["poem"];
 
-if (empty($poet) || empty($name) || empty($poem) ) {
+if (empty($pdate) || empty($name) || empty($poem) ) {
     //Empty
 echo "please fill all the fields !";
 
 
 }
 else {
-    //Not Empty
-    echo "success!";
-    mysql_connect("localhost","root","");
-    mysql_select_db("poemy");
-    mysql_query("INSERT INTO poem(id,poet,poem,pdate,sdate,name) VALUES ('','$poet','$poem','','','$name') ");
+  try {
+    $db = new PDO("mysql:host=localhost;dbname=poemy", "root", "secret");
+} catch ( PDOException $e ){
+    print $e->getMessage();
+}
+
+$query = $db->prepare("INSERT INTO poem SET
+pdate = ?,
+name = ?,
+poem = ?");
+$insert = $query->execute(array(
+     "$pdate", "$name", "$poem"
+));
+if ( $insert ){
+    $last_id = $db->lastInsertId();
+    print "insert işlemi başarılı!";
+}
+
+
+
 
 }
 

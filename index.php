@@ -1,9 +1,10 @@
 <?php
-mysql_connect("localhost","root","");
-mysql_select_db("poemy");
-$sec=mysql_query("select * from poem LIMIT 0,5");
-//$dizi=mysql_fetch_array($sec);
- ?>
+try {
+     $db = new PDO("mysql:host=localhost;dbname=poemy", "root", "secret");
+} catch ( PDOException $e ){
+     print $e->getMessage();
+}
+?>
 <html>
 <meta http-equiv="Content-Type" content="text/HTML; charset=utf-8" />
 <link href="normalize.css" rel="stylesheet">
@@ -18,10 +19,10 @@ $sec=mysql_query("select * from poem LIMIT 0,5");
 
   <head>
     <meta charset="utf-8">
-    <title>Poemy</title>
+    <title>Monoblog</title>
   </head>
   <body style="text-align:center">
-<img src="lusitana.regular.png"  style="margin-top:2%">
+<img src="mono.png"  style="margin-top:2%">
 
 <div id="navbar" class="row" style="color:black; margin-top:5%; " >
     <div class="col-md-3">
@@ -47,27 +48,34 @@ $sec=mysql_query("select * from poem LIMIT 0,5");
 
 
 <?php
-while ($dizi=mysql_fetch_array($sec)) {
-  # code...
-  # code...
-echo "<br/>";
+
+$query = $db->query("SELECT * FROM poem", PDO::FETCH_ASSOC);
+if ( $query->rowCount() ){
+     foreach( $query as $row ){
+       //   print $row['name']."<br />";
+        //Real Code
+ 
+ echo "<br/>";
 echo "<div id='baslik'>";
-echo $dizi["name"];
+echo $row["name"];
 echo "</div>";
 echo "<br/>";
 echo "<div id='siir'>";
-echo $dizi["poem"];
+echo $row["poem"];
 echo "</div>";
 echo "<br/>";
 echo "<div id='yazar's>";
-echo $dizi["poet"];
+echo $row["pdate"];
 echo "</div>";
 echo "<br/>";
 echo "<br/>";
 echo "<br/>";
 echo "<div id='lines'>";
 echo "</div>";
+ 
+        }
 }
+
  ?>
 
  <a style="text-decoration:none;color:black; font-size:90%" href="home.php">SEE MORE</a>

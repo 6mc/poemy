@@ -18,7 +18,7 @@
     <title>Poemy</title>
   </head>
   <body style="text-align:center">
-<img src="lusitana.regular.png"  style="margin-top:2%">
+<img src="mono.png"  style="margin-top:2%">
 
 <div id="navbar" class="row" style="color:black; margin-top:5%; " >
     <div class="col-md-3">

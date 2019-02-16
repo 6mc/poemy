@@ -28,12 +28,12 @@
 
 <head>
   <title>
-    submit a poem
+   Monoblog
   </title>
 </head>
 <body>
   <body style="text-align:center">
-  <img src="lusitana.regular.png"  style="margin-top:2%">
+  <img src="mono.png"  style="margin-top:2%">
 
   <div id="navbar" class="row" style="color:black; margin-top:5%; " >
     <div class="col-md-3">
@@ -58,7 +58,7 @@
 
   <form action="result.php" method="get">
     <br>
-    <input type="text" class="glowing-border" Placeholder="Poem Name,Poet or a Tag" name="keyword"><br>
+    <input type="text" class="glowing-border" Placeholder="Title" name="keyword"><br>
     <div id="smline">
 
     </div>

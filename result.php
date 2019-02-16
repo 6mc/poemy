@@ -3,24 +3,10 @@
 
 $keyword=$_GET["keyword"];
 
-
-if (empty($keyword)) {
-    //Empty
-echo "please fill the field !";
-
-
-}
-else {
-    //Not Empty
-
-    mysql_connect("localhost","root","");
-    mysql_select_db("poemy");
-    $sec=mysql_query("select * from poem where poet like '%$keyword%'");
-    $bul=mysql_query("select * from poem where poem like '%$keyword%'");
-    $ver=mysql_query("select * from poem where name like '%$keyword%'");
-
-
-
+try {
+  $db = new PDO("mysql:host=localhost;dbname=poemy", "root", "secret");
+} catch ( PDOException $e ){
+  print $e->getMessage();
 }
 
 
@@ -42,7 +28,7 @@ else {
      <title>Poemy</title>
    </head>
    <body style="text-align:center">
- <img src="lusitana.regular.png"  style="margin-top:2%">
+ <img src="mono.png"  style="margin-top:2%">
 
  <div id="navbar" class="row" style="color:black; margin-top:5%; " >
      <div class="col-md-3">
@@ -66,94 +52,38 @@ else {
 
  <div id="content">
 <?php
-echo "<div id='resultstext'>";
-echo "<b>Results for '" ;
-echo $keyword;
-echo "'</b>";
- echo "</div>";
-?>
 
- <?php
- while ($dizi=mysql_fetch_array($sec)) {
-   # code...
-   # code...
-
-  # code...
-
+$query = $db->query("select * from poem where name like '%$keyword%'", PDO::FETCH_ASSOC);
+if ( $query->rowCount() ){
+     foreach( $query as $row ){
+       //   print $row['name']."<br />";
+        //Real Code
+ 
  echo "<br/>";
- echo "<div id='baslik'>";
- echo $dizi["name"];
- echo "</div>";
- echo "<br/>";
- echo "<div id='siir'>";
- echo $dizi["poem"];
- echo "</div>";
- echo "<br/>";
- echo "<div id='yazar's>";
- echo $dizi["poet"];
- echo "</div>";
- echo "<br/>";
- echo "<br/>";
- echo "<br/>";
- echo "<div id='lines'>";
- echo "</div>";
- }
-  ?>
-
-  <?php
-  while ($dizi=mysql_fetch_array($bul)) {
-    # code...
-    # code...
-
-
-  echo "<br/>";
-  echo "<div id='baslik'>";
-  echo $dizi["name"];
-  echo "</div>";
-  echo "<br/>";
-  echo "<div id='siir'>";
-  echo $dizi["poem"];
-  echo "</div>";
-  echo "<br/>";
-  echo "<div id='yazar's>";
-  echo $dizi["poet"];
-  echo "</div>";
-  echo "<br/>";
-  echo "<br/>";
-  echo "<br/>";
-  echo "<div id='lines'>";
-  echo "</div>";
-  }
-   ?>
-   <?php
-   while ($dizi=mysql_fetch_array($ver)) {
-     # code...
-     # code...
-
-
-   echo "<br/>";
-   echo "<div id='baslik'>";
-   echo $dizi["name"];
-   echo "</div>";
-   echo "<br/>";
-   echo "<div id='siir'>";
-   echo $dizi["poem"];
-   echo "</div>";
-   echo "<br/>";
-   echo "<div id='yazar's>";
-   echo $dizi["poet"];
-   echo "</div>";
-   echo "<br/>";
-   echo "<br/>";
-   echo "<br/>";
-   echo "<div id='lines'>";
-   echo "</div>";
-   }
+echo "<div id='baslik'>";
+echo $row["name"];
+echo "</div>";
+echo "<br/>";
+echo "<div id='siir'>";
+echo $row["poem"];
+echo "</div>";
+echo "<br/>";
+echo "<div id='yazar's>";
+echo $row["poet"];
+echo "</div>";
+echo "<br/>";
+echo "<br/>";
+echo "<br/>";
+echo "<div id='lines'>";
+echo "</div>";
+ 
+        }
+}
     ?>
  </div>
  <img src="extasy.regular.png"  style="margin-top:2%">
  <div class="footer">
- Designed by <b href="mefa">mcanwoo</b>
+ Designed by <b href="mefa">Mehmet Can</b>
  </div>
 
    </body>

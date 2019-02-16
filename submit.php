@@ -28,12 +28,12 @@
 
 <head>
   <title>
-    submit a poem
+    Monoblog
   </title>
 </head>
 <body>
   <body style="text-align:center">
-  <img src="lusitana.regular.png"  style="margin-top:2%">
+  <img src="mono.png"  style="margin-top:2%">
 
   <div id="navbar" class="row" style="color:black; margin-top:5%; " >
     <div class="col-md-3">
@@ -58,7 +58,11 @@
 
   <form action="check.php" method="get">
     <br>
-    <input type="text" class="glowing-border" Placeholder="Poet" name="poet"><br>
+    <input type="text" class="glowing-border" Placeholder="date"
+    value="
+    <?php echo date('Y-m-d H:i:s'); ?>
+    "
+     name="pdate"><br>
     <div id="smline">
 
     </div>
@@ -66,7 +70,7 @@
     <div class="col-md-12">
 
 
-    <input type="text"class="glowing-border" Placeholder="Poem Name" name="name"><br>
+    <input type="text"class="glowing-border" Placeholder="Title" name="name"><br>
     <div id="smline">
 
     </div>
@@ -79,7 +83,7 @@
 
 
 
-    <textarea type="text" class="glowing-border" id=poem Placeholder="Poem" rows="8" name="poem" cols="50">
+    <textarea type="text" class="glowing-border" id=poem Placeholder="Content" rows="8" name="poem" cols="50">
 </textarea>
 <div id="mline">
 
